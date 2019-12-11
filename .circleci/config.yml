@@ -32,4 +32,4 @@ jobs:
       - run:
           name: Run specs & record baselines
           command: | 
-            docker login --username=dev ---password=$PASS wallarm-dkr-dev.jfrog.io:80
+            docker login --username=dev --password=$PASS wallarm-dkr-dev.jfrog.io:80
