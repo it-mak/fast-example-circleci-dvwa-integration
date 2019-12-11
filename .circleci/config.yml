@@ -36,4 +36,4 @@ jobs:
             && sleep 5 \
             && docker login -u dev -p $PASS http://wallarm-dkr-dev.jfrog.io
             && docker-compose run --service-ports test \
-            && docker-compose run -e CI_MODE=testing -e BUILD_ID=$CIRCLE_WORKFLOW_ID -e TEST_RUN_URI=http://dvwa:80 fast 
+            && docker-compose run -e CI_MODE=testing -e BUILD_ID=$CIRCLE_WORKFLOW_ID -e TEST_RUN_URI=http://dvwa:80  wallarm-dkr-dev.jfrog.io/wallarm-fast-node:feature-FAST-1866-ll-pipelines 
