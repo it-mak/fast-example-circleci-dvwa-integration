@@ -17,8 +17,8 @@ services:
       BUILD_ID: ${CIRCLE_WORKFLOW_ID}
       WALLARM_API_HOST: 51.68.93.197
       WALLARM_API_PORT: 9752
-      WALLARM_API_USE_SSL: false
-      WALLARM_API_CA_VERIFY: false
+      WALLARM_API_USE_SSL: "false"
+      WALLARM_API_CA_VERIFY: "false"
     networks:
       main:
         aliases:
