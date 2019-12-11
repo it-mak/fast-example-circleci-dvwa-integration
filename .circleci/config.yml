@@ -37,4 +37,5 @@ jobs:
             docker-compose up -d dvwa fast selenium \
             &&sleep 15 \
             &&docker-compose run --service-ports test \
+            &&sleep 15 \
             &&docker-compose run -e CI_MODE=testing -e BUILD_ID=$CIRCLE_WORKFLOW_ID -e TEST_RUN_URI=http://dvwa:80 fast 
