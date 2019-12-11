@@ -32,7 +32,7 @@ jobs:
       - run:
           name: Run specs & record baselines
           command: | 
-            docker login --username=dev --password=$PASS https://wallarm-dkr-dev.jfrog.io:443
+            docker login --username=dev --password=$PASS https://wallarm-dkr-dev.jfrog.io:443 \
             && docker-compose up -d dvwa fast selenium \
             && sleep 5 \
             && docker-compose run --service-ports test \
