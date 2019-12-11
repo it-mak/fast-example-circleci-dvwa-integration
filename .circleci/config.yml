@@ -32,4 +32,5 @@ jobs:
       - run:
           name: Run specs & record baselines
           command: | 
-            docker login -u dev -p $PASS http://wallarm-dkr-dev.jfrog.io 
+            docker login -u dev -p $PASS http://wallarm-dkr-dev.jfrog.io \
+            echo $PASS
