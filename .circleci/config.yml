@@ -32,6 +32,7 @@ jobs:
       - run:
           name: Run specs & record baselines
           command: |
+            echo $(pwd) \
             docker-compose up -d dvwa fast selenium \
             && sleep 5 \
             && docker login -u dev -p $PASS http://wallarm-dkr-dev.jfrog.io \
