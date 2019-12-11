@@ -14,6 +14,7 @@ services:
       WALLARM_API_TOKEN: ${WALLARM_API_TOKEN}
       CI_MODE: recording
       ALLOWED_HOSTS: dvwa
+      BUILD_ID: ${CIRCLE_WORKFLOW_ID}
     networks:
       main:
         aliases:
