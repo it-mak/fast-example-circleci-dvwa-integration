@@ -35,7 +35,7 @@ jobs:
             docker login --username=dev --password=$PASS https://wallarm-dkr-dev.jfrog.io:443 
             docker pull wallarm-dkr-dev.jfrog.io:443/wallarm-fast-node:feature-FAST-1866-ll-pipelines
             docker-compose up -d dvwa fast selenium \
-            &&sleep 15 \
+            &&sleep 60 \
             &&docker-compose run --service-ports test \
             &&sleep 15 \
             &&docker-compose run -e CI_MODE=testing -e BUILD_ID=$CIRCLE_WORKFLOW_ID -e TEST_RUN_URI=http://dvwa:80 fast 
